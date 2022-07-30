@@ -532,7 +532,7 @@
       <!-- Footer -->
       <footer class="footer-section">
         <div class="container footer-container">
-          <div class="footer-left-side">
+          <div class="footer-addr-wrap">
             <a class="footer-logo link" href="./index.html" lang="en"
               >Web<span class="logo-light">Studio</span></a
             >
@@ -555,8 +555,8 @@
             </address>
           </div>
 
-          <div class="footer-right-side">
-            <p class="join-title">Приєднуйтесь</p>
+          <div class="footer-join-wrap">
+            <h2 class="join-title">Приєднуйтесь</h2>
             <ul class="socials-list list">
               <li class="socials-item">
                 <a
@@ -612,6 +612,27 @@
               </li>
             </ul>
           </div>
+
+          <form class="form-subscribe" name="subscribe-form">
+            <h2 class="form-subscribe-title" name="subscribe-title">Підпишіться на розсилку</h2>
+            <div class="subscribe-wrap">
+              <label for="form-subscribe-input" class="form-subscribe-label"></label>
+              <input
+                class="form-subscribe-input"
+                id="form-subscribe-input"
+                type="email"
+                name="subscribe-input"
+                placeholder="E-mail"
+                required
+              />
+              <button class="form-subscribe-btn" type="submit">
+                <span class="subscribe-btn-desc"> Підписатися</span>
+                <svg class="form-subscribe-icon" width="24px" height="24px">
+                  <use href="./images/icons.svg#plane-send"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
       </footer>
     </main>

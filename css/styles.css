@@ -27,6 +27,7 @@
 
     /* animation */
     --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-slow: 500ms linear 100ms;
 }
 
 /** =====  Reset styles  =====  
@@ -491,7 +492,7 @@ body {
     background-color: var(--dark-bg-clr);
 }
 
-.footer-left-side {
+.footer-addr-wrap {
     margin-right: 70px;
 }
 
@@ -536,11 +537,13 @@ body {
     color: var(--light-txt-clr);
 }
 
-.footer-right-side {
+.footer-join-wrap {
+    margin-right: 93px;
     padding-top: 12px;
 }
 
-.join-title {
+.join-title,
+.form-subscribe-title {
     margin-bottom: 20px;
 
     font-weight: 700;
@@ -558,6 +561,116 @@ body {
 
 .socials-icon {
     fill: currentColor;
+}
+
+.form-subscribe {
+    padding-top: 12px;
+}
+
+.subscribe-wrap {
+    display: flex;
+}
+
+.form-subscribe-input {
+    display: inline-block;
+    width: 358px;
+    height: 50px;
+    margin-right: 10px;
+    padding: 15px 16px;
+
+    color: var(--light-txt-clr);
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    outline: transparent;
+}
+
+.form-subscribe-input::placeholder {
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-subscribe-btn {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    height: 50px;
+    padding: 0px;
+
+    background: var(--accent-clr);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: transparent;
+    cursor: pointer;
+    outline: transparent;
+}
+
+.form-subscribe-btn:hover,
+.form-subscribe-btn:focus {
+    background-color: var(--sec-acc-clr);
+}
+
+.subscribe-btn-desc {
+    position: absolute;
+    top: 50%;
+    left: 28px;
+    transform: translateY(-50%);
+    transform-origin: center;
+
+    transition: left var(--animation-slow), transform var(--animation-slow);
+}
+
+@keyframes puls {
+    0% {
+        top: 50%;
+        transform: translateY(-50%) scale(1);
+    }
+    50% {
+        top: 50%;
+        transform: translateY(-50%) scale(1.1);
+    }
+    100% {
+        top: 50%;
+        transform: translateY(-50%) scale(1);
+    }
+}
+
+.form-subscribe-input:focus-visible + .form-subscribe-btn > .subscribe-btn-desc,
+.form-subscribe-input:not(:placeholder-shown) + .form-subscribe-btn > .subscribe-btn-desc {
+    left: calc(28px + 24px);
+
+    animation: puls 50ms ease-in 600ms;
+}
+
+.form-subscribe-icon {
+    position:absolute;
+    top: 50%;
+    right: 28px;
+    transform: translateY(-50%);
+
+    transition: transform var(--animation-slow), opacity var(--animation-slow);
+}
+
+.form-subscribe-input:focus-visible + .form-subscribe-btn > .form-subscribe-icon,
+.form-subscribe-input:not(:placeholder-shown) + .form-subscribe-btn > .form-subscribe-icon {
+    transform: translateX(70px) translateY(-62px) scale(0.3);
+    
+    opacity: 0;
+}
+
+.subscribe-btn-desc {
+    margin-right: 10px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: var(--light-txt-clr);
 }
 
 /** =====  Backdrop window  =====  
