@@ -791,7 +791,9 @@ body {
 }
 
 .form-request-input:focus,
-.form-request-input:focus + .form-request-icon {
+.form-request-input:focus + .form-request-icon,
+.form-request-input:not(:placeholder-shown),
+.form-request-input:not(:placeholder-shown) + .form-request-icon {
     border-color: var(--accent-clr);
     fill: var(--accent-clr);
     cursor: auto;
