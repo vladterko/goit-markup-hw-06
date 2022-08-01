@@ -778,11 +778,6 @@ body {
     transition: border-color var(--animation);
 }
 
-.form-request-icon {
-    fill: currentColor;
-    transition: fill var(--animation);
-}
- 
 .form-request-input:hover,
 .form-request-input:hover + .form-request-icon {
     border-color: var(--accent-clr);
@@ -797,6 +792,11 @@ body {
     border-color: var(--accent-clr);
     fill: var(--accent-clr);
     cursor: auto;
+}
+
+.form-request-icon {
+    fill: currentColor;
+    transition: fill var(--animation);
 }
 
 .form-request-icon {
@@ -856,8 +856,8 @@ body {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-
     color: var(--secondary-txt-clr);
+    user-select: none;
 }
 
 .form-agreement-link {
