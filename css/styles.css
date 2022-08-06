@@ -862,8 +862,9 @@ body {
 
 .form-agreement-link {
     color: var(--accent-clr);
-    text-decoration: none;
-    border-bottom: 1px solid var(--accent-clr);
+    /* text-decoration: none;
+    border-bottom: 1px solid var(--accent-clr); */
+    text-underline-position: under;
 
     transition: color var(--animation), border-color var(--animation);
 }
